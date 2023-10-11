@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Accordion component.">
+    <title>Accordion</title>
+    <link rel="stylesheet" href="./web/css/de-reset.css">
+    <link rel="stylesheet" href="./web/css/accordion.css">
+  </head>
+  <body>
+
+    <header style="padding: 20px;">
+      <h1>Accordion</h1>
+    </header>
+
+    <main style="padding: 20px; max-width: 640px;">
+      <!-- Accordion -->
+      <div class="accordion js-accordion" data-id="accordion1">
+        <!-- Accordion item -->
+        <div class="accordion__item js-accordion__item">
+          <h3 class="accordion__heading">
+            <button type="button" id="accordionOne" class="accordion__button js-accordion__button is-active">Section 1</button>
+          </h3>
+          <div class="accordion__body js-accordion__body" aria-labelledby="accordionOne">
+            <div class="accordion__panel">
+              <p style="margin: 0;">Lorem ipsum dolor sit amet, consectetur adipisicing <a href="#">elit</a>. Adipisci totam voluptate dicta neque, architecto eum eaque quae dignissimos voluptatem! Laudantium enim veniam autem dicta itaque?</p>
+            </div>
+          </div>
+        </div>
+        <!--/ Accordion item -->
+        <!-- Accordion item -->
+        <div class="accordion__item js-accordion__item">
+          <h3 class="accordion__heading">
+            <button type="button" id="accordionTwo" class="accordion__button js-accordion__button">Section 2</button>
+          </h3>
+          <div class="accordion__body js-accordion__body" aria-labelledby="accordionTwo">
+            <div class="accordion__panel">
+              <p style="margin: 0;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci totam voluptate dicta neque, architecto eum eaque quae dignissimos voluptatem! Laudantium enim veniam autem dicta itaque?</p>
+            </div>
+          </div>
+        </div>
+        <!--/ Accordion item -->
+        <!-- Accordion item -->
+        <div class="accordion__item js-accordion__item">
+          <h3 class="accordion__heading">
+            <button type="button" id="accordionThree" class="accordion__button js-accordion__button">Section 3</button>
+          </h3>
+          <div class="accordion__body js-accordion__body" aria-labelledby="accordionThree">
+            <div class="accordion__panel">
+              <p style="margin: 0;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci totam voluptate dicta neque, architecto eum eaque quae dignissimos voluptatem! Laudantium enim veniam autem dicta itaque?</p>
+            </div>
+          </div>
+        </div>
+        <!--/ Accordion item -->
+        <!-- Accordion item -->
+        <div class="accordion__item js-accordion__item">
+          <h3 class="accordion__heading">
+            <button type="button" id="accordionFour" class="accordion__button js-accordion__button">Section 4</button>
+          </h3>
+          <div class="accordion__body js-accordion__body" aria-labelledby="accordionFour">
+            <div class="accordion__panel">
+              <p style="margin: 0;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci totam voluptate dicta neque, architecto eum eaque quae dignissimos voluptatem! Laudantium enim veniam autem dicta itaque?</p>
+            </div>
+          </div>
+        </div>
+        <!--/ Accordion item -->
+        <!-- Accordion item -->
+        <div class="accordion__item js-accordion__item">
+          <h3 class="accordion__heading">
+            <button type="button" id="accordionFive" class="accordion__button js-accordion__button">Section 5</button>
+          </h3>
+          <div class="accordion__body js-accordion__body" aria-labelledby="accordionFive">
+            <div class="accordion__panel">
+              <p style="margin: 0;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci totam voluptate dicta neque, architecto eum eaque quae dignissimos voluptatem! Laudantium enim veniam autem dicta itaque?</p>
+            </div>
+          </div>
+        </div>
+        <!--/ Accordion item -->
+      </div>
+      <!--/ Accordion -->
+    </main>
+
+    <footer style="padding: 20px;">
+      <span><small>&copy; DAPSY-dev</small></span>
+    </footer>
+
+    <script src="./web/js/main.js" type="module"></script>
+    <script>
+      window.addEventListener('load', () => {
+        window.App.accordionObj['accordion1'].onOpen = () => {
+          console.log('Open')
+        }
+        window.App.accordionObj['accordion1'].onOpened = () => {
+          console.log('Opened')
+        }
+        window.App.accordionObj['accordion1'].onClose = () => {
+          console.log('Close')
+        }
+        window.App.accordionObj['accordion1'].onClosed = () => {
+          console.log('Closed')
+        }
+      })
+    </script>
+  </body>
+</html>

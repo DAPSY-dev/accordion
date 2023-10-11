@@ -1,0 +1,62 @@
+.accordion {
+  margin-bottom: 20px;
+}
+
+/* .accordion__item {
+} */
+
+/* .accordion__item.is-active {
+} */
+
+.accordion__heading {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.accordion__button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  padding: 15px 20px;
+  width: 100%;
+  font: inherit;
+  color: #333;
+  text-align: left;
+  background: #eee;
+  border: 0;
+  border-radius: 0;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+
+.accordion__button::after {
+  content: '\002B';
+  display: block;
+  margin-left: 15px;
+  font: inherit;
+  font-weight: bold;
+  color: #777;
+}
+
+.accordion__button:hover,
+.accordion__button.is-active {
+  background: #ccc;
+}
+
+.accordion__button.is-active::after {
+  content: '\2212';
+}
+
+.accordion__body {
+  /* "max-height" isn't needed, but it's better for the first page draw. */
+  max-height: 0;
+  background: #fff;
+  transition: max-height 0.3s ease;
+  overflow: hidden;
+}
+
+.accordion__panel {
+  padding: 20px;
+}
